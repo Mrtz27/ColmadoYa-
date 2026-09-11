@@ -12,7 +12,7 @@
     <!-- INICIO: formulario de pedido -->
     <form action="#" method="post">
 
-        <!-- SECCIÓN: datos del cliente -->
+        <!--  datos del cliente -->
         <fieldset>
             <legend>Datos del cliente</legend>
 
@@ -31,25 +31,36 @@
 
             <br><br>
 
-            <!-- SECCIÓN: selección del barrio -->
+            <!-- selección del barrio -->
             <label for="barrio">Barrio:</label>
             <select id="barrio" name="barrio" required>
-                <optgroup label="Santo Domingo Norte">
-                    <option value="villa-mella">Villa Mella</option>
-                    <option value="sabana-perdida">Sabana Perdida</option>
+
+                <option value="" selected disabled>
+                    Selecciona tu barrio
+                </option>
+
+                <optgroup label="Santiago de los Caballeros">
+                    <option value="los-jardines">Los Jardines</option>
+                    <option value="villa-olga">Villa Olga</option>
+                    <option value="cerro-alto">Cerro Alto</option>
+                    <option value="gurabo">Gurabo</option>
+                    <option value="bella-vista">Bella Vista</option>
                 </optgroup>
 
-                <optgroup label="Santo Domingo Este">
-                    <option value="los-mina">Los Mina</option>
-                    <option value="ensanche-ozama">Ensanche Ozama</option>
+                <optgroup label="Otros sectores de Santiago">
+                    <option value="ensanche-libertad">Ensanche Libertad</option>
+                    <option value="los-salados">Los Salados</option>
+                    <option value="ciudad-nueva">EL ejido</option>
+                    <option value="pueblo-nuevo">Pueblo Nuevo</option>
                 </optgroup>
+
             </select>
 
         </fieldset>
 
         <br>
 
-        <!-- SECCIÓN: productos del pedido -->
+        <!-- productos del pedido -->
         <fieldset>
             <legend>Productos del pedido</legend>
 
@@ -73,28 +84,32 @@
 
         <br>
 
-        <!-- SECCIÓN: nota del pedido -->
+        <!-- nota del pedido -->
         <fieldset>
             <legend>Nota del pedido</legend>
 
             <label for="nota">Nota:</label>
             <br>
+
             <textarea id="nota" name="nota" rows="5" cols="40"></textarea>
 
         </fieldset>
 
         <br>
 
-        <!-- SECCIÓN: progreso del pedido -->
+        <!--progreso del pedido -->
         <label for="progreso">Progreso del pedido:</label>
-        <progress id="progreso" value="50" max="100">50%</progress>
+
+        <progress id="progreso" value="50" max="100">
+            50%
+        </progress>
 
         <br><br>
 
         <button type="submit">Enviar pedido</button>
 
     </form>
-    <!-- FIN: formulario de pedido -->
+    <!-- formulario de pedido -->
 
 </body>
 </html>
