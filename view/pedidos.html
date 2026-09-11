@@ -3,32 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedido - ColmadoYa</title>
+    <title>Pedido - ColmadoYa!</title>
 </head>
 <body>
 
     <h1>Realizar pedido</h1>
 
+    <!-- INICIO: formulario de pedido -->
     <form action="#" method="post">
 
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <!-- SECCIÓN: datos del cliente -->
+        <fieldset>
+            <legend>Datos del cliente</legend>
 
-        <br><br>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" required>
+            <br><br>
 
-        <br><br>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
 
-        <label for="direccion">Dirección:</label>
-        <input type="text" id="direccion" name="direccion" required>
+            <br><br>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <br><br>
+
+            <!-- SECCIÓN: selección del barrio -->
+            <label for="barrio">Barrio:</label>
+            <select id="barrio" name="barrio" required>
+                <optgroup label="Santo Domingo Norte">
+                    <option value="villa-mella">Villa Mella</option>
+                    <option value="sabana-perdida">Sabana Perdida</option>
+                </optgroup>
+
+                <optgroup label="Santo Domingo Este">
+                    <option value="los-mina">Los Mina</option>
+                    <option value="ensanche-ozama">Ensanche Ozama</option>
+                </optgroup>
+            </select>
+
+        </fieldset>
+
+        <br>
+
+        <!-- SECCIÓN: productos del pedido -->
+        <fieldset>
+            <legend>Productos del pedido</legend>
+
+            <label for="producto">Producto:</label>
+            <input list="productos" id="producto" name="producto" required>
+
+            <datalist id="productos">
+                <option value="Arroz">
+                <option value="Habichuelas">
+                <option value="Leche">
+                <option value="Pan">
+                <option value="Aceite">
+            </datalist>
+
+            <br><br>
+
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" required>
+
+        </fieldset>
+
+        <br>
+
+        <!-- SECCIÓN: nota del pedido -->
+        <fieldset>
+            <legend>Nota del pedido</legend>
+
+            <label for="nota">Nota:</label>
+            <br>
+            <textarea id="nota" name="nota" rows="5" cols="40"></textarea>
+
+        </fieldset>
+
+        <br>
+
+        <!-- SECCIÓN: progreso del pedido -->
+        <label for="progreso">Progreso del pedido:</label>
+        <progress id="progreso" value="50" max="100">50%</progress>
 
         <br><br>
 
         <button type="submit">Enviar pedido</button>
 
     </form>
+    <!-- FIN: formulario de pedido -->
 
 </body>
 </html>
